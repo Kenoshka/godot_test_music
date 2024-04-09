@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://dq6ai6fkld3fw"]
+
+[ext_resource type="Script" path="res://Scenes/song_panel.gd" id="1_1b0vy"]
+
+[node name="SongPanel" type="Control"]
+custom_minimum_size = Vector2(500, 200)
+layout_mode = 3
+anchor_right = 0.771605
+anchor_bottom = 0.173611
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_1b0vy")
+metadata/_edit_use_anchors_ = true
+
+[node name="SongPageButton" type="Button" parent="."]
+self_modulate = Color(1, 0, 0, 1)
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 0.5
+mouse_filter = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="SongName" type="Label" parent="SongPageButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.046
+anchor_top = 0.18
+anchor_right = 0.946
+anchor_bottom = 0.82
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+vertical_alignment = 1
+autowrap_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="SongPageButton" to="." method="_on_song_page_button_pressed"]
